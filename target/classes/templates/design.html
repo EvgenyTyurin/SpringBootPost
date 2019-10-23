@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<!-- Simple text from model -->      
+<h3 th:text="${message}"></h3>
+
+<!-- Fill data to Taco object -->
+<form method="post" th:object="${design}">
+	<!-- Taco.name -->
+	<p>Name: <input type="text" th:field="*{name}" /></p>
+	<!-- Submit a form data button -->
+	<input type="submit" value="Create shaverma" />
+</form>
+</html>      
