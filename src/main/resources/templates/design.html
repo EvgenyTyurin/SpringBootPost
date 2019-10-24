@@ -9,6 +9,13 @@
 <form method="post" th:object="${design}">
 	<!-- Taco.name -->
 	<p>Name: <input type="text" th:field="*{name}" /></p>
+	
+	<!-- Taco.ingredients -->
+	<div th:each="ingredient : ${ingredients}" >
+	  <input name="ingredients" type="checkbox" th:value="${ingredient}"/>
+	  <span th:text="${ingredient}">INGREDIENT</span><br/>
+	</div>	
+	
 	<!-- Submit a form data button -->
 	<input type="submit" value="Create shaverma" />
 </form>
